@@ -15,10 +15,11 @@ class Index extends React.Component {
             products.map((product)=>{
               return(
                 <li key={product._id} id="column">
-                                  <a href={`/products/${product._id}`}><font color="silver">{product.name}{product.description}</font></a>
                                   {/*<form method="POST" action={`/products/${product._id}?_method=DELETE`}>*/}
                                   <img src={product.img} width="295px" height="393px" ></img>
                                   {/*<input type="submit" value="DELETE"/>*/}
+                                  <br />
+                                  <a href={`/products/${product._id}`}><font color="silver">{product.name}{product.description}</font></a>
                                   <br />
                                   <font color="silver">In stock: {product.qty}</font>
                                   {/*<form method="POST" action={`/products/${this.props.product._id}?_method=PUT`}>

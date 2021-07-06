@@ -3,7 +3,7 @@ const DefaultLayout = require('./layouts/Default');
 
 const myStyle = {
 color: '#ffffff',
-backgroundColor: 'purple',
+backgroundColor: 'black',
 
 };
 
@@ -33,12 +33,13 @@ class Show extends React.Component {
             <DefaultLayout title={`${product.name.toUpperCase()}`} styles={[{key:0, href: '/css/app.css'},
           {key:1, href:'/css/showpage.css'}]}>
               <div className="parent-container">
-                <div className="large-img"><img src={product.img} height="700px"/> </div>
+                <div className="l-img"><img src={product.img} height="500px"/> </div>
                 <div className="text-box">
                   <div className="name">{product.name} </div>
                   <div className="description">{product.description}</div>
                   <div className= "price">Price: ${product.price}</div>
                   <div className="buy-button">{buyButton()} </div>
+                  <br />
                   <div className="edit-link"><a href={`/products/${product._id}/edit`}>Edit This Product</a></div>
                   <div className="back-link"><a href="/products">Back</a></div>
                 </div>

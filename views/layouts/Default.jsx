@@ -16,7 +16,7 @@ class DefaultLayout extends React.Component {
           <body>
             {/*<h1>{this.props.title}</h1>*/}
             <h1><img src="/img/bar_1.jpeg" width="100%"></img></h1>
-            <h2><font color="silver">Whiskey</font></h2>
+            <h2>Whiskey Shop</h2>
             {this.props.children}
 
           </body>

@@ -1,40 +1,40 @@
 const React = require('react')
+const DefaultLayout = require('./layouts/Default');
 
-const myStyle = {
-color: '#ffffff',
-backgroundColor: '#000000',
-};
+
 
 class Index extends React.Component {
   render(){
     const products = this.props.products;
+
     return (
-      <div style={myStyle}>
-        <h1>See All The Products!</h1>
+      <DefaultLayout title={"Shop Page"} styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/indexpage.css'}]}>
+
         <ul>
           {
             products.map((product)=>{
               return(
-                /*<li style={cap}>
-                  <a href={`/pokemon/${i}`}><font color="silver">{`${i}`} {pokemon.name}</font></a>
-                </li>*/
-
-                <li key={product._id}>
+                <li key={product._id} id="column">
                                   <a href={`/products/${product._id}`}><font color="silver">{product.name}{product.description}</font></a>
-
-                                  <form method="POST" action={`/products/${product._id}?_method=DELETE`}>
+                                  {/*<form method="POST" action={`/products/${product._id}?_method=DELETE`}>*/}
                                   <img src={product.img} width="295px" height="393px" ></img>
-                                  <input type="submit" value="DELETE"/>
-                  </form>
+                                  {/*<input type="submit" value="DELETE"/>*/}
+                                  <br />
+                                  <font color="silver">In stock: {product.qty}</font>
+                                  {/*<form method="POST" action={`/products/${this.props.product._id}?_method=PUT`}>
+                                  <input type="submit" value="Buy" onClick={this.onDecrement}/>*
+
+                  </form>*/}<br />
                   <a href={`/products/${product._id}/edit`}><font color="silver">Edit This Product</font></a>
-
                                 </li>
-
               )
             })
           }
         </ul>
-      </div>
+        <footer>
+　<p>&copy; sachiyo</p>
+</footer>
+      </DefaultLayout>
     )
   }
 }

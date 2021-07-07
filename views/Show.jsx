@@ -41,9 +41,14 @@ class Show extends React.Component {
                   <div className="buy-button">{buyButton()} </div>
                   <br />
                   <div className="edit-link"><a href={`/products/${product._id}/edit`}>Edit This Product</a></div>
+
+
+
                   <div className="back-link"><a href="/products">Back</a></div>
-                </div>
-              </div>
+                  </div>
+                  </div>
+                  
+
             </DefaultLayout>
           )
         }

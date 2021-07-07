@@ -25,6 +25,7 @@ class Index extends React.Component {
             })
           }
         </ul>
+        
         </DefaultLayout>
     )
   }
